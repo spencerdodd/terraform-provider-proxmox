@@ -1,5 +1,5 @@
 builds:
-  - id: terraform-provider-proxmox
+  - id: terraform-provider-proxmox-pinned
     env:
       - CGO_ENABLED=0
     mod_timestamp: "{{ .CommitTimestamp }}"
@@ -22,7 +22,7 @@ builds:
         goarch: "386"
       - goos: darwin
         goarch: arm
-    binary: "terraform-provider-proxmox_v{{ .Version }}"
+    binary: "terraform-provider-proxmox-pinned_v{{ .Version }}"
 archives:
   - format: zip
     name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
